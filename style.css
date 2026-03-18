@@ -8,7 +8,104 @@ body{
 font-family:Poppins;
 color:#333;
 }
+html{
+scroll-behavior:smooth;
+}
+section{
+scroll-margin-top:90px;
+}
+/* FAQ */
 
+.faq-section{
+background:#f9fbfb;
+}
+
+.faq{
+max-width:900px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.faq-item{
+background:white;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
+overflow:hidden;
+transition:0.3s;
+}
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 25px;
+cursor:pointer;
+font-weight:500;
+font-size:17px;
+transition:.3s;
+}
+
+.faq-question:hover{
+background:#f3fbfc;
+}
+
+.faq-question i{
+color:#FF6B35;
+transition:.4s;
+}
+
+/* resposta */
+
+.faq-answer{
+
+max-height:0;
+overflow:hidden;
+
+background:#f3fbfc;
+border-left:4px solid #FF6B35;
+
+margin:0 20px;
+border-radius:8px;
+
+padding:0 20px;
+
+line-height:1.7;
+color:#444;
+
+transition:all .45s ease;
+
+}
+
+/* quando abre */
+
+.faq-item.active .faq-answer{
+
+max-height:300px;
+
+padding:20px;
+
+margin:0 20px 20px 20px;
+
+box-shadow:0 10px 18px rgba(0,0,0,0.05);
+
+}
+
+/* pergunta ativa */
+
+.faq-item.active .faq-question{
+
+background:#f6fbfb;
+border-left:4px solid #7BB8C2;
+
+}
+
+/* animação icone */
+
+.faq-item.active i{
+transform:rotate(45deg);
+}
 .container{
 width:90%;
 max-width:1200px;
@@ -336,3 +433,42 @@ margin-top:40px;
 border-top:1px solid #333;
 padding-top:20px;
 }
+
+/*Animações */
+/* Estado inicial das animações */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s cubic-bezier(.17,.67,.32,1);
+}
+
+/* Direções */
+.reveal-left {
+    transform: translateX(-80px);
+}
+
+.reveal-right {
+    transform: translateX(80px);
+}
+
+.reveal-up {
+    transform: translateY(60px);
+}
+
+.reveal-scale {
+    transform: scale(0.9);
+}
+
+/* Quando aparece */
+.reveal.active {
+    opacity: 1;
+    transform: translate(0,0) scale(1);
+}
+
+/* Delay para itens sequenciais */
+
+.delay-1 { transition-delay: .1s; }
+.delay-2 { transition-delay: .2s; }
+.delay-3 { transition-delay: .3s; }
+.delay-4 { transition-delay: .4s; }
+.delay-5 { transition-delay: .5s; }
