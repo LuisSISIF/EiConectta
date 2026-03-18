@@ -427,11 +427,45 @@ list-style:none;
 margin-bottom:8px;
 }
 
-.social a{
-color:#FF6B35;
-font-size:22px;
+
+.social{
+display:flex;
+gap:15px;
+margin-top:20px;
+
 }
 
+.social a{
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:45px;
+height:45px;
+
+border-radius:50%;
+
+background:#111;
+color:orange; /* cor padrão */
+
+font-size:20px;
+
+transition:0.3s;
+text-decoration:none;
+}
+
+.social a:hover{
+transform:translateY(-4px);
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+
+.social a:hover .fa-instagram{
+color:#E1306C;
+}
+
+.social a:hover .fa-whatsapp{
+color:#25D366;
+}
 .footer-bottom{
 text-align:center;
 margin-top:40px;
